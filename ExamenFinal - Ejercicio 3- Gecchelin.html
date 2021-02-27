@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Final Ejercicio 3</title>
+</head>
+<body>
+    <!--
+        Colocar un Select en un formulario que contenga las opciones descriptas. Asociar a
+cada opción los precios: $1000, $1200 y $1500 respectivamente. En un Text colocar la
+cantidad de días a alquilar y en otro Text, mostrar el importe a pagar. Si no se coloca la
+cantidad a alquilar, mostrar un alert indicando tal situación.
+    -->
+    <script languaje="JavaScript">
+       function calcularImporte(){
+        let cilindradaMoto = parseInt (document.form1.D1.options
+            [document.form1.D1.selectedIndex].value);
+        let cantidadDias=parseInt(form1.T2.value);
+            document.form1.T1.value=cantidadDias*cilindradaMoto;
+    }
+    </script>
+    <form name="form1">
+        <p >Cilindrada Moto:<select size="1" name="D1">
+        <option value="1000">100 cm cúbicos</option>
+        <option value="1200">125 cm cúbicos</option>
+        <option value="1500">250 cm cúbicos</option>
+        </select></p>
+        <label for="T2">Cantidad de días: </label>
+        <input type="text" name="T2" size="20" required><br>
+    <input style= "margin: 50px 100px;" type="button" value="Calcular Importe" name="B1"
+    OnClick="calcularImporte()"><br>
+    <label for="">Importe a Pagar</label>
+    <input type="Text" name="T1" size="20" readonly><br>
+    
+    
+</body>
+</html>

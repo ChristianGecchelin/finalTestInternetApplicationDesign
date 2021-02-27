@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Final Ejercicio 2</title>
+</head>
+<body>
+     <!--
+        . Cargar dos vectores, uno con nombres de productos y el otro con sus precios. Se deberá
+realizar un listado completo en dos columnas y mostrar el nombre del producto de
+menor precio. 
+    -->
+    <script languaje="JavaScript">
+       const elementosTecnologicos= ['Celular', 'Notebook', 'Monitor', 'Auriculares']
+       const precios = [400,1000,300,120]
+       precioOferta = precios[1]
+       function listarProductos(){
+           for (let i = 0; i<= precios.length-1; i++) {
+            
+           document.write(`${elementosTecnologicos[i]} ~ $ ${precios[i]}<br>`)
+           }
+       }
+       function menorPrecio(){
+           for (let i = 0; i < precios.length; i++) {
+               if (precios[i]<precioOferta) {
+                   precioOferta = precios[i]
+               }
+               else{
+                   null
+               }
+           }
+       }
+       document.write(`Los precios de los productos son: <br>`);
+       listarProductos();
+       menorPrecio()
+       document.write(`El menor precio es $ ${precioOferta}`)
+    </script>
+</body>
+</html>
